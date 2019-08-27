@@ -7,7 +7,7 @@
 	/**
 	 * Specifies the app name. Default is document.title.
 	 */
-	Editor.prototype.appName = 'draw.io';
+	Editor.prototype.appName = 'Vue';
 	
 	/**
 	 * Known extensions for own files.
@@ -1841,7 +1841,7 @@
 	 */
 	if (window.ColorDialog)
 	{
-		// FilenameDialog.filenameHelpLink = 'https://desk.draw.io/support/solutions/articles/16000091426'; 
+		// FilenameDialog.filenameHelpLink = 'https://interconnection.io/16000091426'; 
 		
 		var colorDialogAddRecentColor = ColorDialog.addRecentColor;
 		
@@ -2265,7 +2265,7 @@
 	            option.style.paddingTop = '5px';
 	            div.appendChild(option);
 	            
-	            var help = ui.menus.createHelpLink('https://desk.draw.io/support/solutions/articles/16000032875');
+	            var help = ui.menus.createHelpLink('https://interconnection.io/16000032875');
 	            help.style.position = 'relative';
 	            help.style.marginLeft = '6px';
 	            help.style.top = '2px';
@@ -4992,7 +4992,7 @@
 		{
 			var helpBtn = mxUtils.button(mxResources.get('help'), function()
 			{
-				graph.openLink('https://desk.draw.io/support/solutions/articles/16000048947');
+				graph.openLink('https://interconnection.io/16000048947');
 			});
 			
 			helpBtn.className = 'geBtn';

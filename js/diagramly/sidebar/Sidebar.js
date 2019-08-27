@@ -94,7 +94,7 @@
 	 * Array of strings for the built-in libraries to be enabled in the more shapes dialog. Null means all,
 	 * empty array means none, possible keys are listed for the libs parameter at
 	 * 
-	 * https://desk.draw.io/support/solutions/articles/16000042546
+	 * https://interconnection.io/16000042546
 	 */
 	Sidebar.prototype.enabledLibraries = null;
 

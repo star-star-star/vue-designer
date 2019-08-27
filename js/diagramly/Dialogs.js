@@ -6304,7 +6304,7 @@ var FindWindow = function(ui, x, y, w, h)
 	
 	mxUtils.write(div, mxResources.get('regularExpression'));
 
-    var help = ui.menus.createHelpLink('https://desk.draw.io/support/solutions/articles/16000088250');
+    var help = ui.menus.createHelpLink('https://interconnection.io/16000088250');
     help.style.position = 'relative';
     help.style.marginLeft = '6px';
     help.style.top = '-1px';
@@ -6672,7 +6672,7 @@ var TagsWindow = function(editorUi, x, y, w, h)
 	if (!editorUi.isOffline() || mxClient.IS_CHROMEAPP)
 	{
 		searchInput.style.width = '240px';
-		var elt = editorUi.menus.createHelpLink('https://desk.draw.io/support/solutions/articles/16000046966');
+		var elt = editorUi.menus.createHelpLink('https://interconnection.io/16000046966');
 		elt.firstChild.style.marginBottom = '6px';
 		elt.style.marginLeft = '6px';
 		div.appendChild(elt);
@@ -7537,7 +7537,7 @@ var PluginsDialog = function(editorUi)
 
 	var helpBtn = mxUtils.button(mxResources.get('help'), function()
 	{
-		editorUi.openLink('https://desk.draw.io/support/solutions/articles/16000056430');
+		editorUi.openLink('https://interconnection.io/16000056430');
 	});
 
 	helpBtn.className = 'geBtn';
@@ -8919,7 +8919,7 @@ var EditShapeDialog = function(editorUi, cell, title, w, h)
 	{
 		var helpBtn = mxUtils.button(mxResources.get('help'), function()
 		{
-			editorUi.openLink('https://desk.draw.io/support/solutions/articles/16000052874');
+			editorUi.openLink('https://interconnection.io/16000052874');
 		});
 		
 		helpBtn.className = 'geBtn';

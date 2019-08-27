@@ -283,7 +283,8 @@ Editor.prototype.initialTopSpacing = 0;
 /**
  * Specifies the app name. Default is document.title.
  */
-Editor.prototype.appName = document.title;
+// Editor.prototype.appName = document.title;
+Editor.prototype.appName = 'Vue';
 
 /**
  * 

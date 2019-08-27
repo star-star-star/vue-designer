@@ -3,7 +3,7 @@
 <html>
 <head>
 	<title>Vue</title>
-	<!-- <meta http-equiv="refresh" content="0;url=/index.html?offline=1"> -->
+	<meta http-equiv="refresh" content="0; url=/index2.html?offline=1&ui=min">
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="Description" content="Vue is a requirements collection tool for use with Vue's generative software development">
@@ -19,13 +19,13 @@
 	<meta apple-mobile-web-app-title="vue"> -->
 
 	<script type="text/javascript">
-		var mxIsElectron = (window && window.process && window.process.type) || (navigator.userAgent.toLowerCase().indexOf(' electron/') > -1);
+		// var mxIsElectron = (window && window.process && window.process.type) || (navigator.userAgent.toLowerCase().indexOf(' electron/') > -1);
 		
-		var mxIsElectron5 = mxIsElectron && parseInt(process.versions.electron) >= 5;
+		// var mxIsElectron5 = mxIsElectron && parseInt(process.versions.electron) >= 5;
 		/**
 		 * URL Parameters and protocol description are here:
 		 *
-		 * https://desk.draw.io/support/solutions/articles/16000042546-what-url-parameters-are-supported
+		 * https://interconnection.io/16000042546-what-url-parameters-are-supported
 		 *
 		 * Parameters for developers:
 		 *
@@ -41,41 +41,48 @@
 		 * --
 		 * - networkshapes=1: For testing network shapes (temporary)
 		 */
-		var urlParams = (function()
-		{
-			var result = new Object();
-			var params = window.location.search.slice(1).split('&');
+
+		//  window.location.search += '?offline=1';
+
+		// var urlParams = (function()
+		// {
+		// 	var result = new Object();
+		// 	var params = window.location.search.slice(1).split('&');
 			
-			for (var i = 0; i < params.length; i++)
-			{
-				idx = params[i].indexOf('=');
+		// 	for (var i = 0; i < params.length; i++)
+		// 	{
+		// 		idx = params[i].indexOf('=');
 				
-				if (idx > 0)
-				{
-					result[params[i].substring(0, idx)] = params[i].substring(idx + 1);
-				}
-			}
+		// 		if (idx > 0)
+		// 		{
+		// 			result[params[i].substring(0, idx)] = params[i].substring(idx + 1);
+		// 		}
+		// 	}
 			
-			return result;
-		})();
+		// 	return result;
+		// })();
 		
 		// Forces CDN caches by passing URL parameters via URL hash
-		if (window.location.hash != null && window.location.hash.substring(0, 2) == '#P')
-		{
-			try
-			{
-				urlParams = JSON.parse(decodeURIComponent(window.location.hash.substring(2)));
+
+
+		// if (window.location.hash != null && window.location.hash.substring(0, 2) == '#P')
+		// {
+		// 	try
+		// 	{
+		// 		urlParams = JSON.parse(decodeURIComponent(window.location.hash.substring(2)));
 				
-				if (urlParams.hash != null)
-				{
-					window.location.hash = urlParams.hash;
-				}
-			}
-			catch (e)
-			{
-				// ignore
-			}
-		}
+		// 		if (urlParams.hash != null)
+		// 		{
+		// 			window.location.hash = urlParams.hash;
+		// 		}
+		// 	}
+		// 	catch (e)
+		// 	{
+		// 		// ignore
+		// 	}
+		// }
+
+		
 		
 		// Redirects page if required
 		// if (urlParams['dev'] != '1')

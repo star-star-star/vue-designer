@@ -61,7 +61,7 @@
 	/**
 	 * Link for scratchpad help.
 	 */
-	EditorUi.scratchpadHelpLink = 'https://desk.draw.io/support/solutions/articles/16000042367';
+	EditorUi.scratchpadHelpLink = 'https://interconnection.io/16000042367';
 	
 	/**
 	 * Updates action states depending on the selection.
@@ -5071,13 +5071,13 @@
 		div.appendChild(hd);
 		
 		var file = this.getCurrentFile();
-		var helpLink = 'https://desk.draw.io/support/solutions/articles/16000051941';
+		var helpLink = 'https://interconnection.io/16000051941';
 		var dy = 0;
 		
 		if (file != null && file.constructor == window.DriveFile && !hideShare)
 		{
 			dy = 80;
-			helpLink = 'https://desk.draw.io/support/solutions/articles/16000039384';
+			helpLink = 'https://interconnection.io/16000039384';
 			var hintSection = document.createElement('div');
 			hintSection.style.cssText = 'border-bottom:1px solid lightGray;padding-bottom:14px;padding-top:6px;margin-bottom:14px;text-align:center;';
 			
@@ -8541,7 +8541,7 @@
 		// Sets help link for placeholders
 		if (!this.isOffline() && typeof window.EditDataDialog !== 'undefined')
 		{
-			EditDataDialog.placeholderHelpLink = 'https://desk.draw.io/support/solutions/articles/16000051979';
+			EditDataDialog.placeholderHelpLink = 'https://interconnection.io/16000051979';
 		}
 		
 		// Passes current page to editor window
@@ -12173,7 +12173,7 @@
 							html = '';
 							break;
 						case appCache.IDLE: // IDLE == 1
-							html = (uiTheme == 'min') ? '' : '<img title="draw.io is up to date." border="0" src="' + IMAGE_PATH + '/checkmark.gif"/>';
+							html = (uiTheme == 'min') ? '' : '<img title="Interconnection is up to date." border="0" src="' + IMAGE_PATH + '/checkmark.gif"/>';
 							break;
 						case appCache.DOWNLOADING: // DOWNLOADING == 3
 							html = '<img title="Downloading new version..." border="0" src="' + IMAGE_PATH + '/spin.gif"/>';
@@ -12640,7 +12640,7 @@
 			}
 			
 			if (pendingLibs == 0) this.spinner.stop();
-		}), null, null, 'https://desk.draw.io/support/solutions/articles/16000092763');
+		}), null, null, 'https://interconnection.io/16000092763');
 		this.showDialog(dlg.container, 340, 375, true, true, null, null, null, null, true);
 	};
 	

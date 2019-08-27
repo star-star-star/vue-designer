@@ -1247,7 +1247,7 @@ App.prototype.init = function()
 								this.drive.checkRealtimeFiles(mxUtils.bind(this, function()
 								{
 									var footer = createFooter('You need to take action to convert legacy files. Click here.',
-										'https://desk.draw.io/support/solutions/articles/16000092210',
+										'https://interconnection.io/16000092210',
 										'geStatusAlert',
 										mxUtils.bind(this, function()
 										{
@@ -1888,7 +1888,8 @@ App.prototype.updateDocumentTitle = function()
 			title = filename + ' - ' + title;
 		}
 		
-		document.title = title;
+		// document.title = title;
+		document.title = Vue;
 	}
 };
 

@@ -305,7 +305,7 @@ DriveClient.prototype.execute = function(fn)
 				
 				this.ui.showError(mxResources.get('error'), msg, mxResources.get('help'), mxUtils.bind(this, function()
 				{
-					this.ui.openLink('https://desk.draw.io/support/solutions/articles/16000074659');
+					this.ui.openLink('https://interconnection.io/16000074659');
 				}), null, mxResources.get('ok'));
 			}), remember);
 		}));
@@ -2619,7 +2619,7 @@ DriveClient.prototype.convertRealtimeFiles = function()
 	else
 	{
 		print('draw.io (' + EditorUi.VERSION + ') is searching files to be converted...');
-		print('<a href="https://desk.draw.io/support/solutions/articles/16000092210" target="_blank">Click here for help</a>');
+		print('<a href="https://interconnection.io/16000092210" target="_blank">Click here for help</a>');
 		
 		if (this.ui.spinner.spin(document.body, 'Searching files...'))
 		{
@@ -2899,7 +2899,7 @@ DriveClient.prototype.convertRealtimeFiles = function()
 								print('Cancelled by user.<br><br>This window can now be closed.');
 							}), null, 'OK', doConvert, 'Help', function()
 							{
-								window.open('https://desk.draw.io/support/solutions/articles/16000092210');
+								window.open('https://interconnection.io/16000092210');
 							}, 340, 120);
 						}
 					}));

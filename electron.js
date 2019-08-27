@@ -53,7 +53,7 @@ function createWindow (opt = {})
 
 	let ourl = url.format(
 	{
-		pathname: `${__dirname}/index.html`,
+		pathname: `${__dirname}/index2.html`,
 		protocol: 'file:',
 		query:
 		{

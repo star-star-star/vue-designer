@@ -1,6 +1,6 @@
 # *DO NOT DIRECTLY EDIT THIS FILE, IT IS AUTOMATICALLY GENERATED AND IT IS BASED ON:*
 # https://docs.google.com/spreadsheet/ccc?key=0AmQEO36liL4FdDJLWVNMaVV2UmRKSnpXU09MYkdGbEE
-aboutDrawio=About draw.io
+aboutDrawio=About Vue
 accessDenied=Access Denied
 action=Action
 actualSize=Actual Size
@@ -160,7 +160,7 @@ diagram=Diagram
 diagramContent=Diagram Content
 diagramLocked=Diagram has been locked to prevent further data loss.
 diagramLockedBySince=The diagram is locked by {1} since {2} ago
-diagramName=Diagram Name
+diagramName=Name
 diagramIsPublic=Diagram is public
 diagramIsNotPublic=Diagram is not public
 diamond=Diamond
@@ -188,7 +188,7 @@ draftSaved=Draft saved
 dragElementsHere=Drag elements here
 dragImagesHere=Drag images or URLs here
 dragUrlsHere=Drag URLs here
-draw.io=draw.io
+draw.io=interconnect
 drawing=Drawing{1}
 drawingEmpty=Drawing is empty
 drawingTooLarge=Drawing is too large

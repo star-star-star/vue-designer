@@ -776,7 +776,7 @@ EditorUi.initMinimalTheme = function()
 				ui.menus.addMenuItems(menu, ['-', 'print', '-'], parent);
 			}
 			
-            ui.menus.addSubmenu('help', menu, parent);
+            // ui.menus.addSubmenu('help', menu, parent);
             
             if (urlParams['embed'] == '1')
 			{
@@ -941,7 +941,7 @@ EditorUi.initMinimalTheme = function()
 			if (typeof(MathJax) !== 'undefined')
 			{
 				var item = ui.menus.addMenuItem(menu, 'mathematicalTypesetting', parent);
-				ui.menus.addLinkToItem(item, 'https://desk.draw.io/support/solutions/articles/16000032875');
+				ui.menus.addLinkToItem(item, 'https://interconnection.io/16000032875');
 			}
 			
             ui.menus.addMenuItems(menu, ['copyConnect', 'collapseExpand', '-', 'pageScale'], parent);

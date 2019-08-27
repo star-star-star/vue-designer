@@ -7,7 +7,7 @@
  * 
  * Documentation:
  * 
- * https://desk.draw.io/support/solutions/articles/16000042372
+ * https://interconnection.io/16000042372
  * 
  * TODO: Use grammer https://msdn.microsoft.com/en-us/library/ee800145.aspx
  */
@@ -260,7 +260,7 @@ Draw.loadPlugin(function(ui) {
 	
     ui.actions.addAction('speechHelp', function()
     {
-    	window.open('https://desk.draw.io/support/solutions/articles/16000042372');
+    	window.open('https://interconnection.io/16000042372');
     });
 
     // Hijacks the settings for storing current voice
@@ -849,7 +849,7 @@ Draw.loadPlugin(function(ui) {
 			}
 			else if (tokens[0] == 'help')
 			{
-				var wnd = ui.openLink('https://desk.draw.io/support/solutions/articles/16000042372');
+				var wnd = ui.openLink('https://interconnection.io/16000042372');
 				
 				if (wnd == null)
 				{
