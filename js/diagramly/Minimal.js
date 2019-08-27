@@ -776,7 +776,7 @@ EditorUi.initMinimalTheme = function()
 				ui.menus.addMenuItems(menu, ['-', 'print', '-'], parent);
 			}
 			
-            // ui.menus.addSubmenu('help', menu, parent);
+            ui.menus.addSubmenu('help', menu, parent);
             
             if (urlParams['embed'] == '1')
 			{

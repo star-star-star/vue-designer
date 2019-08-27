@@ -18,22 +18,22 @@ DriveClient = function(editorUi)
 	// Reading files now possible with no initial click in drive
 	if (this.ui.editor.chromeless && !this.ui.editor.editable && urlParams['rt'] != '1')
 	{
-		this.appId = '850530949725';
-		this.clientId = '850530949725.apps.googleusercontent.com';
+		this.appId = '308222448827';
+		this.clientId = '308222448827.apps.googleusercontent.com';
 		this.scopes = ['https://www.googleapis.com/auth/drive.readonly',
 			'https://www.googleapis.com/auth/userinfo.profile'];
 	}
 	else if (this.ui.isDriveDomain())
 	{
-		this.appId = '671128082532';
-		this.clientId = '671128082532.apps.googleusercontent.com';
+		this.appId = '308222448827';
+		this.clientId = '308222448827.apps.googleusercontent.com';
 	}
 	else
 	{
 		// Uses a different mime-type and realtime model than the drive domain
 		// because realtime models for different app IDs are not compatible
-		this.appId = '420247213240';
-		this.clientId = '420247213240-hnbju1pt13seqrc1hhd5htpotk4g9q7u.apps.googleusercontent.com';
+		this.appId = '308222448827';
+		this.clientId = '308222448827-uoe6l4p0g6v1f5j1mubj2073nubsarf2.apps.googleusercontent.com';
 		this.mimeType = 'application/vnd.jgraph.mxfile.rtlegacy';
 	}
 	
