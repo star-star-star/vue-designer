@@ -660,11 +660,11 @@ mxStencilRegistry.allowEval = false;
 						
 						if (dot >= 0)
 						{
-							name = name.substring(0, name.lastIndexOf('.')) + '.drawio';
+							name = name.substring(0, name.lastIndexOf('.')) + '.vue';
 						}
 						else
 						{
-							name = name + '.drawio';
+							name = name + '.vue';
 						}
 						
 						if (xml.substring(0, 10) == '<mxlibrary')
@@ -1016,9 +1016,9 @@ mxStencilRegistry.allowEval = false;
 		
 		// Adds default extension
 		if (filename.length > 0 && (!/(\.xml)$/i.test(filename) && !/(\.html)$/i.test(filename) &&
-			!/(\.svg)$/i.test(filename) && !/(\.png)$/i.test(filename) && !/(\.drawio)$/i.test(filename)))
+			!/(\.svg)$/i.test(filename) && !/(\.png)$/i.test(filename) && !/(\.vue)$/i.test(filename)))
 		{
-			filename += '.drawio';
+			filename += '.vue';
 		}
 		
 		var path = dialog.showSaveDialogSync({defaultPath: filename});

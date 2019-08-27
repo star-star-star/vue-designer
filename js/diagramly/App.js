@@ -2392,7 +2392,7 @@ App.prototype.open = function()
 					
 					if (dot > 0)
 					{
-						filename = filename.substring(0, filename.length - 4) + '.drawio';
+						filename = filename.substring(0, filename.length - 4) + '.vue';
 					}
 					
 					this.fileLoaded((mxClient.IS_IOS) ?
@@ -3158,7 +3158,7 @@ App.prototype.pickFile = function(mode)
 					
 					if (dot)
 					{
-						filename = filename.substring(0, filename.length - 4) + '.drawio';
+						filename = filename.substring(0, filename.length - 4) + '.vue';
 					}
 					
 					this.fileLoaded((mode == App.MODE_BROWSER) ?
@@ -3590,7 +3590,7 @@ App.prototype.saveFile = function(forceDialog, success)
 						this.pickFolder(mode, mxUtils.bind(this, function(folderId)
 						{
 							this.createFile(name, this.getFileData(/(\.xml)$/i.test(name) ||
-								name.indexOf('.') < 0 || /(\.drawio)$/i.test(name),
+								name.indexOf('.') < 0 || /(\.vue)$/i.test(name),
 								/(\.svg)$/i.test(name), /(\.html)$/i.test(name)),
 								null, mode, done, this.mode == null, folderId);
 						}));
@@ -4217,12 +4217,12 @@ App.prototype.loadFile = function(id, sameWindow, file, success, force)
 								
 								if (!this.useCanvasForExport && ext == '.png')
 								{
-									ext = '.drawio';
+									ext = '.vue';
 								}
 
 								if (ext === '.svg' || ext === '.xml' ||
 									ext === '.html' || ext === '.png'  ||
-									ext === '.drawio')
+									ext === '.vue')
 								{
 									filename = tmp + ext;
 								}
@@ -5361,7 +5361,7 @@ App.prototype.updateHeader = function()
 		
 		if (uiTheme != 'dark')
 		{
-			this.appIcon.style.backgroundColor = '#f08705';
+			this.appIcon.style.backgroundColor = '#000000';
 		}
 		
 		mxEvent.disableContextMenu(this.appIcon);
@@ -5375,7 +5375,7 @@ App.prototype.updateHeader = function()
 		// NOTE: This uses the diagram bit of the old logo as it looks better in this case
 		//this.appIcon.style.filter = 'progid:DXImageTransform.Microsoft.AlphaImageLoader(src=' + IMAGE_PATH + '/logo-white.png,sizingMethod=\'scale\')';
 		var logo = (!mxClient.IS_SVG) ? 'url(\'' + IMAGE_PATH + '/logo-white.png\')' :
-			'url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6ZGM9Imh0dHA6Ly9wdXJsLm9yZy9kYy9lbGVtZW50cy8xLjEvIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpyZGY9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkvMDIvMjItcmRmLXN5bnRheC1ucyMiCiAgIHhtbG5zOnN2Zz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIKICAgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMzA2LjE4NSAxMjAuMjk2IgogICB2aWV3Qm94PSIyNCAyNiA2OCA2OCIKICAgeT0iMHB4IgogICB4PSIwcHgiCiAgIHZlcnNpb249IjEuMSI+CiAgIAkgPGc+PGxpbmUKICAgICAgIHkyPSI3Mi4zOTQiCiAgICAgICB4Mj0iNDEuMDYxIgogICAgICAgeTE9IjQzLjM4NCIKICAgICAgIHgxPSI1OC4wNjkiCiAgICAgICBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiCiAgICAgICBzdHJva2Utd2lkdGg9IjMuNTUyOCIKICAgICAgIHN0cm9rZT0iI0ZGRkZGRiIKICAgICAgIGZpbGw9Im5vbmUiIC8+PGxpbmUKICAgICAgIHkyPSI3Mi4zOTQiCiAgICAgICB4Mj0iNzUuMDc2IgogICAgICAgeTE9IjQzLjM4NCIKICAgICAgIHgxPSI1OC4wNjgiCiAgICAgICBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiCiAgICAgICBzdHJva2Utd2lkdGg9IjMuNTAwOCIKICAgICAgIHN0cm9rZT0iI0ZGRkZGRiIKICAgICAgIGZpbGw9Im5vbmUiIC8+PGc+PHBhdGgKICAgICAgICAgZD0iTTUyLjc3Myw3Ny4wODRjMCwxLjk1NC0xLjU5OSwzLjU1My0zLjU1MywzLjU1M0gzNi45OTljLTEuOTU0LDAtMy41NTMtMS41OTktMy41NTMtMy41NTN2LTkuMzc5ICAgIGMwLTEuOTU0LDEuNTk5LTMuNTUzLDMuNTUzLTMuNTUzaDEyLjIyMmMxLjk1NCwwLDMuNTUzLDEuNTk5LDMuNTUzLDMuNTUzVjc3LjA4NHoiCiAgICAgICAgIGZpbGw9IiNGRkZGRkYiIC8+PC9nPjxnCiAgICAgICBpZD0iZzM0MTkiPjxwYXRoCiAgICAgICAgIGQ9Ik02Ny43NjIsNDguMDc0YzAsMS45NTQtMS41OTksMy41NTMtMy41NTMsMy41NTNINTEuOTg4Yy0xLjk1NCwwLTMuNTUzLTEuNTk5LTMuNTUzLTMuNTUzdi05LjM3OSAgICBjMC0xLjk1NCwxLjU5OS0zLjU1MywzLjU1My0zLjU1M0g2NC4yMWMxLjk1NCwwLDMuNTUzLDEuNTk5LDMuNTUzLDMuNTUzVjQ4LjA3NHoiCiAgICAgICAgIGZpbGw9IiNGRkZGRkYiIC8+PC9nPjxnPjxwYXRoCiAgICAgICAgIGQ9Ik04Mi43NTIsNzcuMDg0YzAsMS45NTQtMS41OTksMy41NTMtMy41NTMsMy41NTNINjYuOTc3Yy0xLjk1NCwwLTMuNTUzLTEuNTk5LTMuNTUzLTMuNTUzdi05LjM3OSAgICBjMC0xLjk1NCwxLjU5OS0zLjU1MywzLjU1My0zLjU1M2gxMi4yMjJjMS45NTQsMCwzLjU1MywxLjU5OSwzLjU1MywzLjU1M1Y3Ny4wODR6IgogICAgICAgICBmaWxsPSIjRkZGRkZGIiAvPjwvZz48L2c+PC9zdmc+)';
+			'url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48c3ZnIHdpZHRoPSI5MTlweCIgaGVpZ2h0PSIzMDhweCIgdmlld0JveD0iMCAwIDkxOSAzMDgiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+ICAgICAgICA8dGl0bGU+dnVlPC90aXRsZT4gICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+ICAgIDxnIGlkPSJQYWdlLTEiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPiAgICAgICAgPGcgaWQ9Ikdyb3VwLTMtQ29weS0yIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTQxLjAwMDAwMCwgLTQ0Ni4wMDAwMDApIiBmaWxsPSIjMDAwMDAwIj4gICAgICAgICAgICA8cGF0aCBkPSJNMzM2Ljc0NDcyNiw3NDUuMiBMMjUyLjkzNzg1Miw3NDUuMiBDMjM0LjE4Mzc3Myw2OTYuNzAxOTggMTk2Ljg3MTUyOSw1OTkuOTAyOTQ4IDE0MSw0NTQuOCBMMjM5LjQ1ODQyNSw0NTQuOCBDMjQ5LjIyNjE3NSw0ODQuOTE1NzA2IDI2OC41NjYwMjksNTQ0Ljc1NTEwOCAyOTcuNDc4NTY4LDYzNC4zMiBMMzAwLjQwODg3OSw2MzQuMzIgQzMxMC4xNzY2MjgsNjA0LjIwNDI5NCAzMjkuOTA3MTg3LDU0NC4zNjQ4OTIgMzU5LjYwMTE0Niw0NTQuOCBMNDQ4LjA5NjUxNiw0NTQuOCBDNDI5LjczMzE0Nyw1MDMuMjk4MDIgMzkyLjYxNjI1NSw2MDAuMDk3MDUyIDMzNi43NDQ3MjYsNzQ1LjIgWiBNNjA0LjUzNjAxNCw3NTQgQzU2MS4xNjcyMDUsNzU0IDUyNy41NjY2NSw3NDIuODUzNDQ1IDUwMy43MzMzNDEsNzIwLjU2IEM0ODAuMjkwNzQxLDY5OC4yNjY1NTUgNDY4LjU2OTYxNyw2NjYuOTc3OTc5IDQ2OC41Njk2MTcsNjI2LjY5MzMzMyBMNDY4LjU2OTYxNyw0NTQuOCBMNTU5LjQwOTIzNiw0NTQuOCBMNTU5LjQwOTIzNiw2MjEuNDEzMzMzIEM1NTkuNDA5MjM2LDY0MC4xODY3NjEgNTYzLjUxMTYyOSw2NTMuODc1NTEzIDU3MS43MTY1MzksNjYyLjQ4IEM1ODAuMzEyMTU5LDY3MS4wODQ0ODcgNTkxLjI1MTg3NCw2NzUuMzg2NjY3IDYwNC41MzYwMTQsNjc1LjM4NjY2NyBDNjE4LjIxMDg2NCw2NzUuMzg2NjY3IDYyOS4zNDU5MzEsNjcxLjA4NDQ4NyA2MzcuOTQxNTUxLDY2Mi40OCBDNjQ2LjE0NjQ2MSw2NTMuODc1NTEzIDY1MC4yNDg4NTQsNjQwLjE4Njc2MSA2NTAuMjQ4ODU0LDYyMS40MTMzMzMgTDY1MC4yNDg4NTQsNDU0LjggTDc0MS4wODg0NzMsNDU0LjggTDc0MS4wODg0NzMsNjI2LjY5MzMzMyBDNzQxLjA4ODQ3Myw2NjYuOTc3OTc5IDcyOS4zNjczNDksNjk4LjI2NjU1NSA3MDUuOTI0NzQ5LDcyMC41NiBDNjgyLjQ4MjE1LDc0Mi44NTM0NDUgNjQ4LjY4NjI0Myw3NTQgNjA0LjUzNjAxNCw3NTQgWiBNMTA0OC4yNzg3Niw2NzAuMTA2NjY3IEMxMDI0LjA1NDc0LDcyNi4wMzU4MzUgOTgwLjQ5MTIyOSw3NTQgOTE3LjU4NjkyMSw3NTQgQzg4Ny41MDIyNTIsNzU0IDg2MC41NDM2NjcsNzQ3LjU0NjczMSA4MzYuNzEwMzU3LDczNC42NCBDODEyLjg3NzA0OCw3MjEuNzMzMjY5IDc5NC4xMjMyNSw3MDMuNzQyMzM4IDc4MC40NDg0LDY4MC42NjY2NjcgQzc2Ny4xNjQyNjEsNjU3LjU5MDk5NiA3NjAuNTIyMjksNjMwLjk5NTcwNiA3NjAuNTIyMjksNjAwLjg4IEM3NjAuNTIyMjksNTcwLjc2NDI5NCA3NjYuOTY4OTA4LDU0NC4xNjkwMDQgNzc5Ljg2MjMzOCw1MjEuMDkzMzMzIEM3OTIuNzU1NzY4LDQ5Ny42MjY1NDkgODEwLjMzNzQ1NCw0NzkuMjQ0NTExIDgzMi42MDc5MjMsNDY1Ljk0NjY2NyBDODU1LjY1OTgxMiw0NTIuNjQ4ODIyIDg4MS40NDYyODUsNDQ2IDkwOS45NjgxMTQsNDQ2IEM5MzguNDg5OTQzLDQ0NiA5NjQuMDgxMDY0LDQ1Mi40NTMyNjkgOTg2Ljc0MjI0Myw0NjUuMzYgQzEwMDkuNDAzNDIsNDc4LjI2NjczMSAxMDI3LjE4MDQ2LDQ5Ni42NDg3NyAxMDQwLjA3Mzg5LDUyMC41MDY2NjcgQzEwNTMuMzU4MDMsNTQzLjk3MzQ1MSAxMDYwLDU3Mi4zMjg3MjMgMTA2MCw2MDUuNTczMzMzIEwxMDYwLDYyNC4zNDY2NjcgTDg1MS45NDc5NzEsNjI0LjM0NjY2NyBDODU1Ljg1NTA3MSw2NDEuOTQ2NzU1IDg2My42NjkxNTMsNjU1LjgzMTA2IDg3NS4zOTA0NTMsNjY2IEM4ODcuMTExNzUzLDY3Ni4xNjg5NCA5MDEuMzcyNDUzLDY4MS4yNTMzMzMgOTE4LjE3Mjk4Myw2ODEuMjUzMzMzIEM5NDMuOTU5ODQyLDY4MS4yNTMzMzMgOTYyLjEyNzU4NCw2NzAuNjkzNDM5IDk3Mi42NzY3NTQsNjQ5LjU3MzMzMyBDOTg5LjQ3NzI4Myw2NTQuMjY2NjkgMTAxNC42Nzc3LDY2MS4xMTEwNjYgMTA0OC4yNzg3Niw2NzAuMTA2NjY3IFogTTkxMS43MjYzLDUxNC4wNTMzMzMgQzg5Ni44NzkzMjEsNTE0LjA1MzMzMyA4ODQuMTgxNDM3LDUxOC4xNTk5NTkgODczLjYzMjI2Nyw1MjYuMzczMzMzIEM4NjMuMDgzMDk3LDUzNC45Nzc4MjEgODU1Ljg1NTA3MSw1NDguMDc5OTEyIDg1MS45NDc5NzEsNTY1LjY4IEM4NzcuMzQ0MTIsNTY1LjY4IDkxNS42MzMxMjUsNTY1LjY4IDk2Ni44MTYxMzMsNTY1LjY4IEM5NjUuNjQ0MDAzLDU0OC44NjIxMzggOTU5Ljk3ODc5NCw1MzUuOTU1NjAxIDk0OS44MjAzMzQsNTI2Ljk2IEM5MzkuNjYxODc0LDUxOC4zNTU1MTMgOTI2Ljk2Mzk5LDUxNC4wNTMzMzMgOTExLjcyNjMsNTE0LjA1MzMzMyBaIiBpZD0idnVlIj48L3BhdGg+ICAgICAgICA8L2c+ICAgIDwvZz48L3N2Zz4=)';
 		this.appIcon.style.backgroundImage = logo;		
 		this.appIcon.style.backgroundPosition = 'center center';
 		this.appIcon.style.backgroundRepeat = 'no-repeat';

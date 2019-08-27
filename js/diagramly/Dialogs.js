@@ -2767,7 +2767,7 @@ var NewDialog = function(editorUi, compact, showName, callback, createOnly, canc
 				editorUi.mode == App.MODE_BROWSER) ? mxResources.get('diagramName') : mxResources.get('filename')) + ':');
 	}
 	
-	var ext = '.drawio';
+	var ext = '.vue';
 	
 	if (editorUi.mode == App.MODE_GOOGLE && editorUi.drive != null)
 	{
@@ -3980,7 +3980,7 @@ var CreateDialog = function(editorUi, title, createFn, cancelFn, dlgTitle, btnLa
 				}
 				else if (newMode == App.MODE_DEVICE)
 				{
-					ext = '.drawio';
+					ext = '.vue';
 				}
 				
 				if (idx >= 0)
@@ -5493,7 +5493,7 @@ var RevisionDialog = function(editorUi, revs, restoreFn)
 		if (currentDoc != null)
 		{
     		var data = mxUtils.getXml(currentDoc.documentElement);
-			var filename = editorUi.getBaseFilename() + '.drawio';
+			var filename = editorUi.getBaseFilename() + '.vue';
     		
 	    	if (editorUi.isLocalFileSave())
 	    	{

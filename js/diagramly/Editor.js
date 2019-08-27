@@ -1841,7 +1841,7 @@
 	 */
 	if (window.ColorDialog)
 	{
-		FilenameDialog.filenameHelpLink = 'https://desk.draw.io/support/solutions/articles/16000091426'; 
+		// FilenameDialog.filenameHelpLink = 'https://desk.draw.io/support/solutions/articles/16000091426'; 
 		
 		var colorDialogAddRecentColor = ColorDialog.addRecentColor;
 		

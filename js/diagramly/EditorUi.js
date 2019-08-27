@@ -9957,7 +9957,7 @@
 							{
 								if (!this.useCanvasForExport && /(\.png)$/i.test(name))
 								{
-									name = name.substring(0, name.length - 4) + '.drawio';
+									name = name.substring(0, name.length - 4) + '.vue';
 								}
 								
 								var handleResult = mxUtils.bind(this, function(xml)
@@ -9966,11 +9966,11 @@
 									
 									if (dot >= 0)
 									{
-										name = name.substring(0, name.lastIndexOf('.')) + '.drawio';
+										name = name.substring(0, name.lastIndexOf('.')) + '.vue';
 									}
 									else
 									{
-										name = name + '.drawio';
+										name = name + '.vue';
 									}
 									
 									if (xml.substring(0, 10) == '<mxlibrary')
