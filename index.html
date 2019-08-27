@@ -3,7 +3,7 @@
 <html>
 <head>
 	<title>Vue</title>
-	<meta http-equiv="refresh" content="0;url=index.html?offline=1">
+	<!-- <meta http-equiv="refresh" content="0;url=/index.html?offline=1"> -->
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="Description" content="Vue is a requirements collection tool for use with Vue's generative software development">
@@ -15,8 +15,8 @@
 	<meta name="msapplication-config" content="images/browserconfig.xml">
     <meta name="mobile-web-app-capable" content="yes">
 	<meta name="theme-color" content="#d89000">
-	<meta application-name="vue">
-	<meta apple-mobile-web-app-title="vue">
+	<!-- <meta application-name="vue">
+	<meta apple-mobile-web-app-title="vue"> -->
 
 	<script type="text/javascript">
 		var mxIsElectron = (window && window.process && window.process.type) || (navigator.userAgent.toLowerCase().indexOf(' electron/') > -1);
@@ -78,81 +78,81 @@
 		}
 		
 		// Redirects page if required
-		if (urlParams['dev'] != '1')
-		{
-			(function()
-			{
-				var proto = window.location.protocol;
+		// if (urlParams['dev'] != '1')
+		// {
+		// 	(function()
+		// 	{
+		// 		var proto = window.location.protocol;
 				
-				if (!mxIsElectron)
-				{
-					var host = window.location.host;
+		// 		if (!mxIsElectron)
+		// 		{
+		// 			var host = window.location.host;
 		
-					// Redirects apex and rt to www
-					if (host === 'draw.io' || host === 'rt.draw.io')
-					{
-						host = 'www.draw.io';
-					}
+		// 			// Redirects apex and rt to www
+		// 			if (host === 'draw.io' || host === 'rt.draw.io')
+		// 			{
+		// 				host = 'www.draw.io';
+		// 			}
 					
-					var href = proto + '//' + host + window.location.href.substring(
-							window.location.protocol.length +
-							window.location.host.length + 2);
+		// 			var href = proto + '//' + host + window.location.href.substring(
+		// 					window.location.protocol.length +
+		// 					window.location.host.length + 2);
 		
-					// Redirects if href changes
-					if (href != window.location.href)
-					{
-						window.location.href = href;
-					}
-				}
-				else if (!mxIsElectron5)
-				{
-					// It's electron, but v3 or lower
-					window.location.href = 'https://about.draw.io/updates-to-draw-io-desktop/';
-				}
-			})();
-		}
+		// 			// Redirects if href changes
+		// 			if (href != window.location.href)
+		// 			{
+		// 				window.location.href = href;
+		// 			}
+		// 		}
+		// 		else if (!mxIsElectron5)
+		// 		{
+		// 			// It's electron, but v3 or lower
+		// 			window.location.href = 'https://about.draw.io/updates-to-draw-io-desktop/';
+		// 		}
+		// 	})();
+		// }
 		
 		/**
 		 * Adds meta tags with application name (depends on offline URL parameter)
 		 */
 		(function()
 		{
-			function addMeta(name, content, httpEquiv)
-			{
-				try
-				{
-					var s = document.createElement('meta');
+			// function addMeta(name, content, httpEquiv)
+			// {
+			// 	try
+			// 	{
+			// 		var s = document.createElement('meta');
 					
-					if (name != null) 
-					{
-						s.setAttribute('name', name);
-					}
+			// 		if (name != null) 
+			// 		{
+			// 			s.setAttribute('name', name);
+			// 		}
 
-					s.setAttribute('content', content);
+			// 		s.setAttribute('content', content);
 					
-					if (httpEquiv != null) 
-					{
-						s.setAttribute('http-equiv', httpEquiv);
-					}
+			// 		if (httpEquiv != null) 
+			// 		{
+			// 			s.setAttribute('http-equiv', httpEquiv);
+			// 		}
 
-				  	var t = document.getElementsByTagName('meta')[0];
-				  	t.parentNode.insertBefore(s, t);
-				}
-				catch (e)
-				{
-					// ignore
-				}
-			};
+			// 	  	var t = document.getElementsByTagName('meta')[0];
+			// 	  	t.parentNode.insertBefore(s, t);
+			// 	}
+			// 	catch (e)
+			// 	{
+			// 		// ignore
+			// 	}
+			// };
 			
-			var name = 'interconnection';
+			// var name = 'interconnection';
 
-			if (urlParams['offline'] === '1')
-			{
-				name += ' app';
-			}
+			// if (urlParams['offline'] === '1')
+			// {
+			// 	name += ' app';
+			// }
 			
-			addMeta('apple-mobile-web-app-title', name);
-			addMeta('application-name', name);
+			// addMeta('apple-mobile-web-app-title', name);
+			// addMeta('application-name', name);
 
 			if (mxIsElectron5)
 			{
