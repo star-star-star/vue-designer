@@ -679,7 +679,7 @@
 
 		editorUi.actions.addAction('support...', function()
 		{
-			editorUi.openLink('https://interconnect.io/support.html');
+			editorUi.openLink('https://interconnection.io/support.html');
 		});
 
 		editorUi.actions.addAction('exportOptionsDisabled...', function()
