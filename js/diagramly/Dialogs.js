@@ -24,7 +24,7 @@ var StorageDialog = function(editorUi, fn, rowLimit)
 	if (!editorUi.isOffline() && editorUi.getServiceCount() > 1)
 	{
 		var help = document.createElement('a');
-		help.setAttribute('href', 'https://about.draw.io/support/');
+		help.setAttribute('href', 'https://interconnect.io/support.html');
 		help.setAttribute('title', mxResources.get('help'));
 		help.setAttribute('target', '_blank');
 		help.style.position = 'absolute';
@@ -555,7 +555,7 @@ var SplashDialog = function(editorUi)
 	if (!editorUi.isOffline() && serviceCount > 1)
 	{
 		help = document.createElement('a');
-		help.setAttribute('href', 'https://about.draw.io/support/');
+		help.setAttribute('href', 'https://interconnect.io/support.html');
 		help.setAttribute('title', mxResources.get('help'));
 		help.setAttribute('target', '_blank');
 		help.style.position = 'absolute';
