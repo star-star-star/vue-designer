@@ -106,12 +106,12 @@ DriveClient.prototype.libraryMimeType = 'application/vnd.jgraph.mxlibrary';
 /**
  * Contains the hostname of the new app.
  */
-DriveClient.prototype.newAppHostname = 'www.draw.io';
+DriveClient.prototype.newAppHostname = 'interconnection.io';
 
 /**
  * Contains the hostname of the old app.
  */
-DriveClient.prototype.oldAppHostname = 'legacy.draw.io';
+DriveClient.prototype.oldAppHostname = 'interconnection.io';
 
 /**
  * Executes the first step for connecting to Google Drive.
